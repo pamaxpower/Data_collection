@@ -8,7 +8,7 @@ from scrapy.utils.log import configure_logging
 # чтение настроек и запись их в свойства паука
 from scrapy.utils.project import get_project_settings
 
-from job.spiders.hhru import HhruSpider
+from spiders.hhru import HhruSpider
 
 if __name__ == "__main__":
     configure_logging()
