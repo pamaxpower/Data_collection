@@ -33,8 +33,8 @@ class LigaProSpider(scrapy.Spider):
         player2 = response.xpath('.//td[@class="left"]/a/text()').getall()
         score = response.xpath('.//td[@class="score"]//a/text()').getall()
         um = response.xpath('.//td[@class="score"]//a/@href').getall()
-        time = [full_date[0] for _ in range(len(score))]
-        date = [full_date[1] for _ in range(len(score))]
+        date = [full_date[0] for _ in range(len(score))]
+        time = [full_date[1] for _ in range(len(score))]
         stol = [full_name.split('.')[0].split(' ')[-1] for _ in range(len(score))]
         rating = [full_name.split('.')[1].split(' ')[-1] for _ in range(len(score))]
 

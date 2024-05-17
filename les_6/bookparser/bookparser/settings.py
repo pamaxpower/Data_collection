@@ -65,9 +65,16 @@ COOKIES_ENABLED = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+
+# цифра означает приоритет
 ITEM_PIPELINES = {
    "bookparser.pipelines.BookparserPipeline": 300,
+   "bookparser.pipelines.BookPhotosPipeline": 200,
 }
+# директория для скачивания
+IMAGES_STORE = './photos'
+
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

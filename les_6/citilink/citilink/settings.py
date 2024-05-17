@@ -18,6 +18,7 @@ LOG_LEVEL = "DEBUG"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.887 YaBrowser/24.4.2.887 Yowser/2.5 Safari/537.36'
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
@@ -67,15 +68,15 @@ COOKIES_ENABLED = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-# ITEM_PIPELINES = {
-#     "scrapy.pipelines.CustomImagesPipeline" : 1,
-#     #"citilink.pipelines.CitilinkPipeline": 300,
-# }
+ITEM_PIPELINES = {
+    "scrapy.pipelines.CustomImagesPipeline" : 1,
+    #"citilink.pipelines.CitilinkPipeline": 300,
+}
 
-# IMAGES_STORE = './images'
+IMAGES_STORE = './images'
 
-# # определяем какие поля можно выводить в файл (остальные не будут)
-# FEED_EXPORT_FIELDS = ['name', 'price']
+# определяем какие поля можно выводить в файл (остальные не будут)
+FEED_EXPORT_FIELDS = ['name', 'price']
 
 
 

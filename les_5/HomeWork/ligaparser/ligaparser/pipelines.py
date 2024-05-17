@@ -30,7 +30,7 @@ class LigaparserPipeline:
 
 
 
-        with open('./ligapro.csv', 'a', newline='', encoding='utf-8') as f:
+        with open('./ligapro.csv', 'a+', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=tours_list[0].keys())
             #writer.writeheader()
             for row in tours_list:
